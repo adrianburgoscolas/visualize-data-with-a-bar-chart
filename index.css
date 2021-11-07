@@ -1,15 +1,52 @@
-svg{
-    background-color: silver;
+body{
+    background-color: rgb(241, 241, 241);
+    font-family: 'Nunito', sans-serif;
 }
-main div{
-    padding: 40px; 
-    background-color: lightsteelblue;
+header{
+    text-align: center;
+    color: rgb(94, 94, 94);
+    width: 1040px;
+    margin: auto;
+}
+svg{
+    background-color: white;
+    margin-top: -30px;
+}
+#chart{
+    background-color: white;
+    position: relative;
+    padding-bottom: 40px; 
+    margin: auto;
+    width: 900px;
+    text-align: center;
+    box-shadow: 0 20px 50px 0 rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+h2{
+    top: 0;
+    left: 255px;
+    margin-top: 30px;
+    position: absolute;
+    color: rgb(234, 230, 255);
+    font-size: 35px;
+    
+}
+.decoration{
+    width: 1000px;
+    height: 120px;
+    background: linear-gradient(to right, slateblue, rgb(191, 177, 255));
+    transform: rotate(0deg);
 }
 #tooltip{
     position: absolute;
     transition: all 0.2s;
 }
 p{
-    background-color: white;
+    background: linear-gradient(to right, slateblue, rgb(191, 177, 255));
+    color: white;
     padding: 10px;
+    box-shadow: 0 20px 50px 0 rgba(0, 0, 0, 0.3);
+}
+p,#chart{
+    border-radius: 30px;
 }

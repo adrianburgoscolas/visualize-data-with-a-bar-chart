@@ -8,8 +8,8 @@ document.addEventListener('DOMContentLoaded', function(){
     xhr.onload = ()=>{
         const dataset = JSON.parse(xhr.responseText).data;
         const w = 800;
-        const h = 500;
-        const padding = 50;
+        const h = 400;
+        const padding = 70;
         // chart
         const xScale = d3.scaleLinear();
         const xData = dataset.map((data)=>parseInt(data[0].split('-')[0],10))
@@ -53,13 +53,14 @@ document.addEventListener('DOMContentLoaded', function(){
                 .on('mouseout',(d)=>{
                     tooltip.style('visibility','hidden')
                 })
-                .attr('width',(w-padding*2)/(dataset.length*0.3))
+                .attr('width',(w-padding*2)/(dataset.length*1.1))
                 .attr('height',(data)=>hScale(data[1])-padding)
-                .attr('x',(data,i)=>xAxisScale(xData[i]))
+                .attr('x',(data,i)=>xScale(i+1))
                 .attr('y',(data,i)=>yScale(data[1]))
                 .attr('class','bar')
                 .attr('data-date',(d,i)=>d[0])
-                .attr('data-gdp',(d)=>d[1]);
+                .attr('data-gdp',(d)=>d[1])
+                .attr('fill','grey');
                 
         const xAxis = d3.axisBottom(xAxisScale).tickFormat(d3.format('d'));
         myChart.append('g')
