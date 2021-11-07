@@ -5,3 +5,11 @@ main div{
     padding: 40px; 
     background-color: lightsteelblue;
 }
+#tooltip{
+    position: absolute;
+    transition: all 0.2s;
+}
+p{
+    background-color: white;
+    padding: 10px;
+}
